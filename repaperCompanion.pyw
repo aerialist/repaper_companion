@@ -232,6 +232,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		
 	def popuratePorts(self):
 		self.ports = list_ports.comports()
+		self.comboBox.clear()
 		for port in self.ports:
 			self.comboBox.addItem(str(port[0]))
 
